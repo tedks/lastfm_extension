@@ -89,7 +89,7 @@ else
     #copy the files
     #lib files
     declare -a libfiles=("lastfm_extension.plugin" "lastfm_extension.py" 
-                         "LastFMExtensionGenreGuesser.py" 
+                         "LastFMExtensionGenreGuesser.py" "lastfmextension_genres.py"
                          "LastFMExtensionKeys.py" "LastFMExtensionUtils.py"
                          "LastFMExtensionGui.py" "pylast.py")
     

@@ -21,6 +21,7 @@
 
 import pylast
 import rb
+from lastfmextension_genres import genre_from_tags
 
 from LastFMExtensionUtils import asynchronous_call as async
 
@@ -83,7 +84,4 @@ class LastFMGenreGuesser(object):
     first match.
     '''
     def _genre_from_tags(self, tags):
-        for tag in tags:
-            if tag.lower() in self.whitelist:
-                return tag.title()
-        return None
+        return genre_from_tags(tags, self.whitelist)
