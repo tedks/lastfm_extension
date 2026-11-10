@@ -28,3 +28,4 @@ pip-log.txt
 
 # no need to share my personal settings
 settings.conf
+/bazel-*

@@ -1,0 +1,19 @@
+"""Offline genre matcher; the credentialed Rhythmbox plugin is host-bound."""
+
+load("@rules_python//python:defs.bzl", "py_library", "py_test")
+
+py_library(
+    name = "genre_matcher",
+    srcs = ["lastfmextension_genres.py"],
+    visibility = ["//visibility:public"],
+)
+
+py_test(
+    name = "genre_matcher_test",
+    srcs = ["tests/test_genres.py"],
+    data = ["genres.txt"],
+    main = "tests/test_genres.py",
+    legacy_create_init = 0,
+    size = "small",
+    deps = [":genre_matcher"],
+)
